@@ -1,0 +1,57 @@
+﻿@using Belethors_General_Warehouse.Repositories;
+@model int
+@{
+    ViewBag.Title = "ProductStocks";
+    //String productID = Convert.ToString()
+}
+
+<h2>ProductStocks</h2>
+
+
+@{ 
+    StocksRepo StocksRepo = new StocksRepo();
+    ProductRepo ProductRepo = new ProductRepo();
+    List<List<String>> stocksInfo = StocksRepo.getStockInfo(Model);
+    String productName = ProductRepo.GetProductName(Model);
+
+}
+
+
+<p>
+    Product ID:
+    @Model
+    <br />
+    Product Name:
+    @productName
+</p>
+
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                Store name
+            </td>
+
+            <td>
+                Amount in stock
+            </td>
+
+        </tr>
+
+        @foreach (List<String> stock in stocksInfo)
+        {
+
+    <tr>
+        <td>@stock[0]</td>
+        <td>@stock[1]</td>
+        @{
+            var stockID = StocksRepo.getStock(stock[0], Model).ID;
+
+        }
+        <td>@Html.ActionLink("Update Stocks", "UpdateStock", "Home", new { storeName = stock[0], productId = Convert.ToString(Model), stock_id = stockID }, null)</td>
+    </tr>
+            }
+    </tbody>
+</table>
+

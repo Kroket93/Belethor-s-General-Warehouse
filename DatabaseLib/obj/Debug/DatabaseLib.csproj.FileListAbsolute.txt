@@ -1,0 +1,11 @@
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\DatabaseLib.dll.config
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\DatabaseLib.dll
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\DatabaseLib.pdb
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\EntityFramework.dll
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\EntityFramework.xml
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\obj\Debug\DatabaseLib.csprojAssemblyReference.cache
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\obj\Debug\DatabaseLib.csproj.CopyComplete
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\obj\Debug\DatabaseLib.dll
+C:\Users\luuk_\source\repos\Belethors_General_Warehouse\DatabaseLib\obj\Debug\DatabaseLib.pdb

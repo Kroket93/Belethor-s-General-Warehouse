@@ -1,0 +1,32 @@
+﻿@model Belethors_General_Warehouse.Models.ProductModel
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+<h2>AddProduct</h2>
+
+@using (Html.BeginForm("AddProduct", "Home"))
+{
+    @Html.LabelFor(m => m.Brand)
+    @Html.TextBoxFor(m => m.Brand)
+    <br />
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    @Html.LabelFor(m => m.Value)
+    @Html.TextBoxFor(m => m.Value)
+    <br />
+    @Html.LabelFor(m => m.Height)
+    @Html.TextBoxFor(m => m.Height)
+    <br />
+    @Html.LabelFor(m => m.Length)
+    @Html.TextBoxFor(m => m.Length)
+    <br />
+    @Html.LabelFor(m => m.Weight)
+    @Html.TextBoxFor(m => m.Weight)
+    <br />
+
+
+
+    <button type="submit">Add</button>
+}

@@ -1,0 +1,53 @@
+﻿@using DatabaseLib;
+@model List<List<String>>
+@{
+    ViewBag.Title = "Overview";
+}
+
+<h2>Overview</h2>
+
+<p>All stock info:</p>
+
+@{
+    int i = 0;
+    int divideAfter = 10;
+}
+
+<table>
+    <tbody>
+
+        @foreach (List<String> stockInfo in Model)
+        {
+            if (i == divideAfter)
+            {
+                i = 0;
+            }
+            if (i == 0)
+            {
+                i++;
+                <tr>
+                    <td class="biggerText">
+                        product name
+                    </td>
+                    <td class="biggerText">
+                        store name
+                    </td>
+                    <td class="biggerText">
+                        amount in stock
+                    </td>
+                </tr>
+            }
+            else
+            {
+                i++;
+                <tr>
+                    @foreach (String stock in stockInfo)
+                    {
+                        <td>@stock</td>
+                    }
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

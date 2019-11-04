@@ -1,0 +1,18 @@
+﻿@model Belethors_General_Warehouse.Models.storeNameWithStockModel
+@{
+    ViewBag.Title = "UpdateStock";
+}
+
+<h2>UpdateStock</h2>
+
+
+@using (Html.BeginForm("UpdateStockBonus", "Home"))
+{
+
+    @Html.LabelFor(m => m.storeName)
+    @Html.HiddenFor(m => m.stockID)
+    @Html.TextBoxFor(m => m.stockAmount)
+
+
+    <button type="submit">Update</button>
+}

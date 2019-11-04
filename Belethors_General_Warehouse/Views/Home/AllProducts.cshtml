@@ -1,0 +1,57 @@
+﻿@using Belethors_General_Warehouse.Models;
+@model List<ProductModel>
+@{
+    ViewBag.Title = "All Products";
+}
+
+<h2>Overview</h2>
+
+<p>
+    @Html.ActionLink("Add new product", "AddProduct", "Home")
+</p>
+
+<p>All Products:</p>
+
+@{
+    int i = 0;
+    int divideAfter = 99999;
+}
+
+<table>
+    <tbody>
+
+        @foreach (ProductModel product in Model)
+        {
+            
+            if (i == divideAfter)
+            {
+                i = 0;
+            }
+            if (i == 0)
+            {
+                i++;
+                <tr>
+                    <td class="biggerText">
+                        product name
+                    </td>
+                    <td class="biggerText">
+                        link to stocks
+                    </td>
+                    <td class="biggerText">
+                        update product
+                    </td>
+                </tr>
+            }
+            else
+            {
+                i++;
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@Html.ActionLink("Check stocks", "ProductStocks", "Home", new { productID = product.productID }, null)</td>
+                    <td>@Html.ActionLink("Update Product", "UpdateProduct", "Home", new { productID = product.productID }, null)</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

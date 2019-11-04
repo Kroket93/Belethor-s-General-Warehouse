@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Belethor_general_goods_warehouseModelStoreContainer" CdmEntityContainer="Belethor_general_goods_warehouseEntities">
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="Belethor_general_goods_warehouseModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stocks">
+      <EntityTypeMapping TypeName="Belethor_general_goods_warehouseModel.stock">
+        <MappingFragment StoreEntitySet="stock">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stores">
+      <EntityTypeMapping TypeName="Belethor_general_goods_warehouseModel.store">
+        <MappingFragment StoreEntitySet="store">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="numberOfEmployees" ColumnName="numberOfEmployees" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
